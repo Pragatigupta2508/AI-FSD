@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+    <h1>AI FSD</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="home">
+    <div class="home-content">
+        <h2>Welcome to AI Full Stack Development</h2>
+        <p>
+            Building intelligent, scalable, and modern web applications
+            with AI-powered solutions.
+        </p>
+        <button>Get Started</button>
+    </div>
+</section>
+<style>
+    /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+nav h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffd5;
+}
+
+/* HERO SECTION */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    text-align: center;
+    padding: 20px;
+}
+
+.home-content h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+/* BUTTON */
+.home-content button {
+    margin-top: 30px;
+    padding: 14px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #00ffd5;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-content button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 255, 213, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .home-content h2 {
+        font-size: 34px;
+    }
+}
+
+</style>
+</body>
+</html>
