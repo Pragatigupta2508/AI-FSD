@@ -15,6 +15,11 @@ app.get("/",function(req,res){
 });
 });
 
+bcrypt.compare("P4&&w0RD", "$2b$10$YlI1Lbth8YsBBfyi3WODBujimAVqkx5ATyzdnCNOBe8btk8PY/J2O", function(err, result) {
+    console.log(result); // true or false
+    //res.send(result);
+});
+
 
 // app.use(cookieparser());
 
