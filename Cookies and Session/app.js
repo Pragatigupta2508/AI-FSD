@@ -6,6 +6,8 @@ const cookieparser = require('cookie-parser');
 
 const bcrypt = require('bcrypt');
 
+const jwt = require('jsonwebtoken');
+
 app.get("/",function(req,res){
     bcrypt.genSalt(10, function(err, salt) {
     bcrypt.hash("P4&&w0RD", salt, function(err, hash) {
@@ -15,9 +17,20 @@ app.get("/",function(req,res){
 });
 });
 
-bcrypt.compare("P4&&w0RD", "$2b$10$YlI1Lbth8YsBBfyi3WODBujimAVqkx5ATyzdnCNOBe8btk8PY/J2O", function(err, result) {
-    console.log(result); // true or false
-    //res.send(result);
+// bcrypt.compare("P4&&w0RD", "$2b$10$YlI1Lbth8YsBBfyi3WODBujimAVqkx5ATyzdnCNOBe8btk8PY/J2O", function(err, result) {
+//     console.log(result); // true or false
+//     //res.send(result);
+// });
+
+app.get("/jwt",function(req,res){
+
+    let token = jwt.sign({ name: "pragati" }, 'secretkey');
+     jwt.verify(token, 'secretkey', function(err, decoded) {
+        console.log(token); // bar
+        //res.send(decoded);
+    });
+    
+    //res.send(token);
 });
 
 
